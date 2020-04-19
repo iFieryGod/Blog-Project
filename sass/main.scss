@@ -1,0 +1,94 @@
+@import './materialize';
+
+// header
+$header-bg: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), url(../images/lefteris-kallergis.jpg) center;
+$header-height: 300px;
+// $mission-color: rgba(250, 255, 253, 1); 
+// $mission-color: rgba(255, 240, 90, 1); 
+$mission-color-rough: rgba(14, 17, 22, 1);
+$mission-color: rgba(152, 193, 217, 1); 
+ 
+// text-color-function
+@function set-text-color($color) {
+  @if(lightness($color) > 50)  {
+    @return #000000;
+  } @else {
+    @return #ffffff;
+  }
+}
+
+body {
+  background: $mission-color;
+  color: set-text-color($mission-color)
+}
+
+.main-header {
+  background: $header-bg;
+  color: #fff;
+  background-size: cover;
+  height: $header-height;
+  margin-bottom: 10px;
+
+  h1 {
+    margin: 0;
+    padding-top: 30px;
+  }
+  
+}
+
+.img-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+}
+
+.card-content {
+  color: $mission-color;
+}
+
+.page-footer {
+  background: rgba(14, 17, 22, 1);
+
+  .footer-copyright {
+    background: rgba(54, 56, 54, 1);
+  }
+}
+.card {
+ .card-image {
+
+  .card-title {
+     color: rgba(14, 17, 22, 1);
+     font-weight: bold;
+     font-size: 18px;
+     text-transform: uppercase;
+ }
+}
+}
+.row-1, .row-2, .row-3 {
+  opacity: 0;
+}
+
+.sidenav li a {
+  padding-top: 30px;
+  color: rgba(255, 240, 90, 1);
+}
+
+#brand {
+  margin-left: 30px;
+}
+
+#brandSide {
+  margin-left: 30px;
+  border-bottom: 1px solid rgba(255, 240, 90, 1);
+}
+
+#userLink {
+  margin-top: 30px;
+}
+
+#iceCreamCone {
+  position: absolute;
+  top: 8%;
+  left: -40%;
+}
